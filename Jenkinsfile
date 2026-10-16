@@ -39,7 +39,7 @@ pipeline {
     }
     post {
         always{
-            junit 'tests-examples/demo-todo-app.spec.js'
+            junit testResults: '**/junit*.xml', allowEmptyResults: true
         }
     }
 }
